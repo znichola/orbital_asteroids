@@ -12,13 +12,18 @@ Download [GoDot](https://godotengine.org/download) and open this project with it
 ### Control Scheme
 
 The aim is destroy as many space rocks before you get hit 2 times and die.
-`a d` adjust your rotation
-`w` forward thrust
-`space bar` shoot
-`enter` start game
-`r` toggle the camera between relative and absolute mode
-`i` toggle insaine mode, need to die to take effect
 
+`a d` adjust your rotation
+
+`w` forward thrust
+
+`space bar` shoot
+
+`enter` start game
+
+`r` toggle the camera between relative and absolute mode
+
+`i` toggle insaine mode, need to die to take effect
 
 ## Acknowledgments
 
