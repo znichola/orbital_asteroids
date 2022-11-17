@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://asteroid.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://planet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sounds/Star Commander1.wav" type="AudioStream" id=6]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.0148699, 0.174721, 0.736059, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 700, 700, 0 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.0
+angular_velocity = -4.36833e-22
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 3.5
+color_ramp = SubResource( 2 )
+
+[node name="main" type="Node"]
+script = ExtResource( 1 )
+asteroid = ExtResource( 2 )
+player = ExtResource( 3 )
+
+[node name="planet" parent="." instance=ExtResource( 4 )]
+position = Vector2( 512, 350 )
+grav_well_radius = 2000.0
+
+[node name="planet_cam" type="Camera2D" parent="planet"]
+position = Vector2( 0, -50 )
+current = true
+
+[node name="vector_parts" type="Particles2D" parent="planet/planet_cam"]
+show_behind_parent = true
+z_index = -10
+amount = 64
+lifetime = 5.0
+local_coords = false
+process_material = SubResource( 3 )
+
+[node name="asteroids" type="Node" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource( 5 )]
+layer = 1
+
+[node name="asteroid_spawn_timer" type="Timer" parent="."]
+autostart = true
+
+[node name="background_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = 1.0
+autoplay = true
+
+[node name="level_reset_timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="asteroid_spawn_timer" to="." method="_on_asteroid_spawn_timer_timeout"]
+[connection signal="finished" from="background_sfx" to="." method="_on_background_sfx_finished"]
+[connection signal="timeout" from="level_reset_timer" to="." method="_on_level_reset_timer_timeout"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/422440__humanoide9000__sci-fi-cannon.wav-ba75087e1931b981e5d49523d531a7e2.sample"
+
+[deps]
+
+source_file="res://sounds/422440__humanoide9000__sci-fi-cannon.wav"
+source_md5="20a1e6633d3b855e41d2a0b7501d01e8"
+
+dest_files=[ "res://.import/422440__humanoide9000__sci-fi-cannon.wav-ba75087e1931b981e5d49523d531a7e2.sample" ]
+dest_md5="51b4319594f6d6b8c72b1ce9008580db"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

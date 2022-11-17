@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Star Commander1 16bit.wav-d920a295a52a02f3748772aa8b19b613.sample"
+
+[deps]
+
+source_file="res://sounds/Star Commander1 16bit.wav"
+source_md5="768945c0fbffc5ed0b294dab544ffc44"
+
+dest_files=[ "res://.import/Star Commander1 16bit.wav-d920a295a52a02f3748772aa8b19b613.sample" ]
+dest_md5="01670ce0cf22dd082edc732e8685ae03"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

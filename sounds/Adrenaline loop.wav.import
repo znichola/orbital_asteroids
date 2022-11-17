@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Adrenaline loop.wav-f90fb0a735c69d1dacd6c1b8a027c478.sample"
+
+[deps]
+
+source_file="res://sounds/Adrenaline loop.wav"
+source_md5="38edff1edf3a59ec0886cbeb903006d7"
+
+dest_files=[ "res://.import/Adrenaline loop.wav-f90fb0a735c69d1dacd6c1b8a027c478.sample" ]
+dest_md5="e13e88b2d291653c766796ad47a10035"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

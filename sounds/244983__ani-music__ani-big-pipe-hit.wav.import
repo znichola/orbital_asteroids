@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/244983__ani-music__ani-big-pipe-hit.wav-519ee0ed2711ab2e497a6a6a41879934.sample"
+
+[deps]
+
+source_file="res://sounds/244983__ani-music__ani-big-pipe-hit.wav"
+source_md5="112caf1dcaed1a07f50f58bc69584ccb"
+
+dest_files=[ "res://.import/244983__ani-music__ani-big-pipe-hit.wav-519ee0ed2711ab2e497a6a6a41879934.sample" ]
+dest_md5="24e4edf684da508dfaaee1406f4a0eb9"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

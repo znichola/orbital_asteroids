@@ -1,0 +1,271 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://planet.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 60.0
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 1.0
+
+[sub_resource type="Gradient" id=3]
+
+offsets = PoolRealArray( 0, 0.263941, 0.810409, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=4]
+
+flags = 4
+gradient = SubResource( 3 )
+width = 2048
+
+[sub_resource type="Curve" id=5]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0.639648 ), 0.0, 0.0, 0, 0, Vector2( 0.400919, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.263672 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+
+flags = 4
+width = 2048
+curve = SubResource( 5 )
+
+[sub_resource type="Curve" id=7]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0.000663165, 0.5 ), 0.0, 0.0, 0, 0, Vector2( 0.493709, 0.983398 ), 0.0, 0.0, 0, 0, Vector2( 0.999337, 0.564453 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=8]
+
+flags = 4
+width = 2048
+curve = SubResource( 7 )
+
+[sub_resource type="ParticlesMaterial" id=9]
+
+render_priority = 0
+trail_divisor = 12
+trail_size_modifier = SubResource( 8 )
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 18.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 45.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = -0.7
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 30.0
+angle_random = 0.8
+scale = 1.0
+scale_random = 0.0
+scale_curve = SubResource( 6 )
+color_ramp = SubResource( 4 )
+hue_variation = 1.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Angular Velocity", "Color", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Scale", "Spread", "Trail" ]
+
+[sub_resource type="ParticlesMaterial" id=10]
+
+render_priority = 0
+trail_divisor = 12
+trail_size_modifier = SubResource( 8 )
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 18.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 32.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = -0.9
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 30.0
+angle_random = 0.8
+scale = 1.0
+scale_random = 0.0
+scale_curve = SubResource( 6 )
+color_ramp = SubResource( 4 )
+hue_variation = 1.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Angular Velocity", "Color", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Scale", "Spread", "Trail" ]
+
+[node name="planet" type="RigidBody2D" groups=[
+"planets",
+]]
+
+input_pickable = false
+collision_layer = 3
+collision_mask = 3
+mode = 1
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = 0.0
+angular_velocity = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Collision", "Linear" ]
+__meta__ = {
+"_edit_group_": true
+}
+planet_radius = 60.0
+grav_well_radius = 500.0
+
+[node name="planet" type="CollisionShape2D" parent="." index="0"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="grav_well" type="Area2D" parent="." index="1"]
+
+input_pickable = true
+space_override = 1
+gravity_point = true
+gravity_distance_scale = 0.001
+gravity_vec = Vector2( 0, 0 )
+gravity = 1024.0
+linear_damp = 0.0
+angular_damp = 0.0
+priority = 1.0
+collision_layer = 3
+collision_mask = 3
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="shape" type="CollisionShape2D" parent="grav_well" index="0"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="fill" type="Polygon2D" parent="." index="2"]
+
+polygon = PoolVector2Array( 0, 0 )
+uv = PoolVector2Array(  )
+color = Color( 0.078125, 0.0726318, 0.0726318, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="outline" type="Line2D" parent="." index="3"]
+
+points = PoolVector2Array( 0, 0 )
+width = 5.0
+default_color = Color( 0.889832, 0.90038, 0.953125, 1 )
+texture_mode = 1060211334
+sharp_limit = 2.0
+round_precision = 8
+
+[node name="clouds" type="Node2D" parent="." index="4"]
+
+visible = false
+position = Vector2( 0, -0.523369 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="particles_bottom" type="Particles2D" parent="clouds" index="0"]
+
+position = Vector2( 9.32877, -3.52129 )
+rotation = 1.58267
+emitting = true
+amount = 48
+lifetime = 0.6
+one_shot = false
+preprocess = 0.3
+speed_scale = 0.5
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 9 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Time", "Transform" ]
+
+[node name="particles_top" type="Particles2D" parent="clouds" index="1"]
+
+position = Vector2( 5.83109, -7.47368 )
+rotation = 1.58267
+emitting = true
+amount = 48
+lifetime = 0.5
+one_shot = false
+preprocess = 0.3
+speed_scale = 0.5
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 10 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time" ]
+
+[connection signal="body_exited" from="grav_well" to="." method="_on_grav_well_body_exited"]
+
+

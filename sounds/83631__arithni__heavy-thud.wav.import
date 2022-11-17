@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/83631__arithni__heavy-thud.wav-dcf10d26e4f6df5daf9963742845b0d2.sample"
+
+[deps]
+
+source_file="res://sounds/83631__arithni__heavy-thud.wav"
+source_md5="8b109f067558b09912ab83432d213194"
+
+dest_files=[ "res://.import/83631__arithni__heavy-thud.wav-dcf10d26e4f6df5daf9963742845b0d2.sample" ]
+dest_md5="8000aba3b0d2e31d4fce9a463eb14e48"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

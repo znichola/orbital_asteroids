@@ -1,0 +1,21 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+
+resource_name = "flash"
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:default_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.988281, 0.972839, 0.972839, 1 ), Color( 0.988281, 0.972839, 0.972839, 0.270706 ), Color( 0.988281, 0.972839, 0.972839, 1 ) ]
+}
+

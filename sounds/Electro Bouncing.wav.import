@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Electro Bouncing.wav-b1f5aa36bd3738dc4d44029e59975bcd.sample"
+
+[deps]
+
+source_file="res://sounds/Electro Bouncing.wav"
+source_md5="00e0f7c9265c71118edf0a0843d5758f"
+
+dest_files=[ "res://.import/Electro Bouncing.wav-b1f5aa36bd3738dc4d44029e59975bcd.sample" ]
+dest_md5="0205b188852e0103954226c513545252"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

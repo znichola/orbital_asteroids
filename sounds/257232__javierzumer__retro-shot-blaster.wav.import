@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/257232__javierzumer__retro-shot-blaster.wav-35179d9c5bc4ab4aaf068600c49efe1f.sample"
+
+[deps]
+
+source_file="res://sounds/257232__javierzumer__retro-shot-blaster.wav"
+source_md5="49b7754505d698dd393b658523d9d059"
+
+dest_files=[ "res://.import/257232__javierzumer__retro-shot-blaster.wav-35179d9c5bc4ab4aaf068600c49efe1f.sample" ]
+dest_md5="923a32a90a4978aa0c957d304f8c340d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

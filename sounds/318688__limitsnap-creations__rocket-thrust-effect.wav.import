@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/318688__limitsnap-creations__rocket-thrust-effect.wav-4b6fff089e113eaa8f7700a25cd7ff02.sample"
+
+[deps]
+
+source_file="res://sounds/318688__limitsnap-creations__rocket-thrust-effect.wav"
+source_md5="ed550f344fc8cd780f6b197f71ae24cd"
+
+dest_files=[ "res://.import/318688__limitsnap-creations__rocket-thrust-effect.wav-4b6fff089e113eaa8f7700a25cd7ff02.sample" ]
+dest_md5="4675dde54cb2ae3586b38462824c19b1"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

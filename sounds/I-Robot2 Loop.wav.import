@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/I-Robot2 Loop.wav-2d8ad377e37235b83833b25e67a2212c.sample"
+
+[deps]
+
+source_file="res://sounds/I-Robot2 Loop.wav"
+source_md5="b745e2ed81954e8299cedb4f02262d74"
+
+dest_files=[ "res://.import/I-Robot2 Loop.wav-2d8ad377e37235b83833b25e67a2212c.sample" ]
+dest_md5="3edaede41b66a12a19c217186a7247ea"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://asteroid.gd" type="Script" id=1]
+
+[node name="asteroid" type="RigidBody2D" groups=[
+"asteroids",
+]]
+
+position = Vector2( 414.914, 179.569 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 0.8
+bounce = 0.3
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 1
+contact_monitor = true
+sleeping = false
+can_sleep = false
+linear_velocity = Vector2( 0, 0 )
+linear_damp = 0.0
+angular_velocity = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Applied Forces", "Linear", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="outline" type="Line2D" parent="." index="0"]
+
+points = PoolVector2Array( 0, 0 )
+width = 10.0
+default_color = Color( 0.956863, 0.917647, 0.917647, 1 )
+texture_mode = 1060211334
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 2.0
+round_precision = 8
+_sections_unfolded = [ "Capping" ]
+
+[node name="fill" type="Polygon2D" parent="." index="1"]
+
+polygon = PoolVector2Array(  )
+uv = PoolVector2Array(  )
+color = Color( 0.0664063, 0.0604401, 0.0604401, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="collision" type="CollisionPolygon2D" parent="." index="2"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0, 0 )
+
+[node name="collision_imunity" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.4
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="collision_imunity" to="." method="_on_collision_imunity_timeout"]
+
+

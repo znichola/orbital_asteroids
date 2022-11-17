@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ship_part.gd" type="Script" id=1]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -17, 0, -17, -10, -4, -26, 2, -26, 19.6916, -16.4171, 8.4126, -6.95804, -6.44755, -3.28671, -2.25174, 9.82518, -17, 10, -17, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 8.06294, 0.559444, 10.1609, -5.90909, 19.286, -16.6367, 50, 0, 24.7029, 13.7026, 17.1539, 9.82518, 20.1259, 4.23077, 14.007, -0.839157, 8.06294, 0.559444 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -2.44505, 9.88851, -5.92307, -2.23776, 7.53847, -6.60839, 7.18882, 1.25874, 12.7832, -0.839157, 18.5525, 4.4056, 16.979, 10.5245, 23.9425, 14.1145, 2, 26, -4, 26, -17, 10, -2.44505, 9.88851 )
+
+[node name="ship_part" type="RigidBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 0.01
+friction = 0.8
+bounce = 0.3
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 1
+contact_monitor = true
+sleeping = false
+can_sleep = false
+linear_velocity = Vector2( 0, 0 )
+linear_damp = 0.0
+angular_velocity = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="part_1" type="Line2D" parent="." index="0"]
+
+points = PoolVector2Array( -17, 0, -17, -10, -4, -26, 2, -26, 19.6916, -16.4171, 8.4126, -6.95804, -6.44755, -3.28671, -2.25174, 9.82518, -17, 10, -17, 0 )
+width = 5.5
+default_color = Color( 0.988281, 0.972839, 0.972839, 1 )
+texture_mode = 1060211334
+joint_mode = 2
+sharp_limit = 3.0
+round_precision = 8
+
+[node name="part_2" type="Line2D" parent="." index="1"]
+
+points = PoolVector2Array( 8.06294, 0.559444, 10.1609, -5.90909, 19.286, -16.6367, 50, 0, 24.7029, 13.7026, 17.1539, 9.82518, 20.1259, 4.23077, 14.007, -0.839157, 8.06294, 0.559444 )
+width = 5.5
+default_color = Color( 0.988281, 0.972839, 0.972839, 1 )
+texture_mode = 1060211334
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 3.0
+round_precision = 8
+
+[node name="part_3" type="Line2D" parent="." index="2"]
+
+points = PoolVector2Array( -2.44505, 9.88851, -5.92307, -2.23776, 7.53847, -6.60839, 7.18882, 1.25874, 12.7832, -0.839157, 18.5525, 4.4056, 16.979, 10.5245, 23.9425, 14.1145, 2, 26, -4, 26, -17, 10, -2.44505, 9.88851 )
+width = 5.5
+default_color = Color( 0.988281, 0.972839, 0.972839, 1 )
+texture_mode = 1060211334
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 3.0
+round_precision = 8
+_sections_unfolded = [ "Capping" ]
+
+[node name="collision_1" type="CollisionShape2D" parent="." index="3"]
+
+shape = SubResource( 1 )
+disabled = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="collision_2" type="CollisionShape2D" parent="." index="4"]
+
+shape = SubResource( 2 )
+disabled = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="collision_3" type="CollisionShape2D" parent="." index="5"]
+
+shape = SubResource( 3 )
+disabled = true
+_sections_unfolded = [ "Transform" ]
+
+
